@@ -1,0 +1,113 @@
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding: 0 8px;
+    margin: 16px 0;
+    color: #4b4d53;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#clienteForm label,
+table#clienteTable th,
+table#clienteTable td,
+#detalleCliente p,
+#detalleCliente span
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2.promedio-clientes,
+h2.desviacion-clientes {
+    display: flex;
+    justify-content: center;
+}
+
+.promedio-clientes p,
+.desviacion-clientes p {
+    color: #00B0FF;
+    margin: 0 25px;
+}
+
+table#clienteTable td { 
+    text-align: center;
+}
+
+#clienteForm input {
+    text-align: center;
+    border: 1px solid #C4EEFF;
+    border-radius: 5px;
+    background-color: #F2FCFF;   
+    width: 225px;
+    height: 20px;
+}
+
+input#edad {
+    margin-left: 29px;
+}
+
+input#fechanac {
+    width: 120px;
+}
+
+button {
+    border-radius: 20px;
+    background-color: #00B0FF;
+    border: 1px solid #00B0FF;
+    width: 150px;
+    height: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button#verListaClientes.page-registro {
+    position: absolute;
+    left: 54%;
+}
+
+button.registrar-cliente {
+    margin: 15px 188px;
+}
+
+form#clienteForm {
+    margin: auto 34pc;
+    width: 500px;
+}
+
+table#clienteTable {
+    width: 650px;
+    border-radius: 20px;
+    background-color: #F2FCFF;
+    border: 1px solid #00B0FF;
+    margin: auto;
+    padding: 16px 14px;
+}
+
+button#crearNuevoCliente.page-lista {
+    position: absolute;
+    right: 25%;
+}
+
+div#detalleCliente {
+    width: 350px;
+    margin: 0 auto;
+    padding: 15px 80px;
+    border: 1px solid #C4EEFF;
+    border-radius: 5px;
+    background-color: #F2FCFF;  
+}
+
+.content-buttonProyeccion {
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+button#verListaClientes.page-proyeccion {
+    margin-left: 30px;
+}

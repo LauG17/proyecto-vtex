@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import db  from "./firebaseco";
-import { collection, addDoc } from "@firebase/firestore"; // Importa las funciones necesarias
+import { collection, addDoc } from "@firebase/firestore"; 
 
 $(document).ready(function() {
-  // Validación del formulario antes de enviarlo
+  // Validacion del formulario antes de enviarlo
   function validateForm() {
     const nombre = $('#nombre').val();
     const apellido = $('#apellido').val();
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   // Configurar el formulario para capturar los datos y registrar en Firestore
   $('#clienteForm').submit(function(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+    event.preventDefault(); // Evitar que el formulario se envie automáticamente
 
     // Validar el formulario antes de registrar los datos
     if (!validateForm()) {

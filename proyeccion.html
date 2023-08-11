@@ -2,23 +2,39 @@
 <html>
 <head>
   <title>Datos del cliente</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Proyección y análisis de cliente</h1>
-  <table id="proyeccionTable">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Edad</th>
-        <th>Fecha de nacimiento</th>
-        <th>Fecha probable de muerte</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <div id="detalleCliente">
+    <p>Nombre: <span id="nombreCliente"></span></p>
+    <p>Apellido: <span id="apellidoCliente"></span></p>
+    <p>Edad: <span id="edadCliente"></span></p>
+    <p>Fecha de nacimiento: <span id="fechanacCliente"></span></p>
+    <p>Fecha posible de muerte: <span id="fechamuerCliente"></span></p>
+  </div>
+  <div class="content-buttonProyeccion">
+    <!-- Botón "Crear Cliente" -->
+    <button id="crearNuevoCliente">Crear nuevo cliente</button>
+    <!-- Botón "Ver lista" -->
+    <button  id="verListaClientes" class="page-proyeccion">Lista de clientes</button>
+  </div>
 
-  <!-- Cargar la configuración de Firebase y app.js -->
+  <!-- Redirecccion a lista de clientes -->
+  <script>
+    document.getElementById('verListaClientes').addEventListener('click', function() {
+      window.location.href = 'index.html'; 
+    });
+  </script>
+
+  <!-- Redirecccion a la página de registro -->
+  <script>
+    document.getElementById('crearNuevoCliente').addEventListener('click', function() {
+      window.location.href = 'registro.html'; 
+    });
+  </script>
+
+  <!-- Cargar la configuración de Firebase -->
   <script src="/firebase.bundle.js"></script>
 </body>
 </html>

@@ -10,13 +10,21 @@
       <tr>
         <th>Nombre</th>
         <th>Apellido</th>
-        <th>Acciones</th>
+        <th>Detalle del cliente</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
   <h2 class="promedio-clientes">Promedio edad entre todos los clientes <p> </p></h2>
   <h2 class="desviacion-clientes">Desviación estándar entre las edades de todos los clientes <p> </p></h2>
+  <button id="crearNuevoCliente" class="page-lista">Crear nuevo cliente</button>
+
+  <!-- Redirecccion a la página de registro -->
+  <script>
+    document.getElementById('crearNuevoCliente').addEventListener('click', function() {
+      window.location.href = 'registro.html'; 
+    });
+  </script>
 
   <!-- Cargar la configuración de Firebase y app.js -->
   <script src="/firebase.bundle.js"></script>

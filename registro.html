@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Registrar Cliente</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Creación de Cliente</h1>
@@ -18,11 +19,19 @@
     <label for="fechanac">Fecha de Nacimiento:</label>
     <input type="date" id="fechanac" name="fechanac" required><br>
    
-    <button type="submit">Registrar Cliente</button>
+    <button class="registrar-cliente" type="submit">Registrar Cliente</button>
   </form>
 
+  <button id="verListaClientes" class="page-registro">Lista de clientes</button>
+
+  <!-- Redirecccion a lista de clientes -->
+  <script>
+    document.getElementById('verListaClientes').addEventListener('click', function() {
+      window.location.href = 'index.html'; 
+    });
+  </script>
+
   <!-- Cargar la configuración de Firebase y registro.js -->
-  <script src="firebase-config.js"></script>
-  <script src="dist/registro.bundle.js"></script>
+  <script src="/firebase.bundle.js"></script>
 </body>
 </html>

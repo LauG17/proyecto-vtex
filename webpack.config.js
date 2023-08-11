@@ -1,11 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
     app: './src/app.js',
     registro: './src/registro.js',
-    firebase: './src/firebaseco.js'
+    firebase: './src/firebaseco.js',
+    proyeccion: './src/proyeccion.js'
+
   },
   output: {
     filename: '[name].bundle.js',
@@ -20,6 +24,13 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
       }
     ]
   },
@@ -27,18 +38,21 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html',
       filename: 'index.html',
-      chunks: ['app']
+      chunks: ['app'],
+      //inject: 'body' 
     }),
     new HtmlWebpackPlugin({
       template: 'registro.html',
       filename: 'registro.html',
-      chunks: ['registro']
+      chunks: ['registro'],
+      //inject: 'body' 
     }),
     new HtmlWebpackPlugin({
       template: 'proyeccion.html',
       filename: 'proyeccion.html',
-      chunks: ['proyeccion']
-    })
+      chunks: ['proyeccion'],
+      //inject: 'body' 
+    }),
   ],
   devServer: {
     static: {
